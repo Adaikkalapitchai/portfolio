@@ -1,0 +1,183 @@
+.experience-section {
+  background: var(--bg-secondary);
+  position: relative;
+}
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Timeline Base */
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: linear-gradient(to bottom, var(--primary), var(--secondary), var(--accent));
+  transform: translateX(-50%);
+  border-radius: var(--border-radius-full);
+  opacity: 0.3;
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.timeline-item.left {
+  left: 0;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+/* Central Timeline Dots */
+.timeline-dot {
+  position: absolute;
+  top: 30px;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--border-radius-full);
+  background: var(--bg-primary);
+  border: 4px solid var(--primary);
+  z-index: 10;
+  box-shadow: 0 0 10px var(--primary);
+  transition: background var(--transition-fast);
+}
+
+.timeline-item.left .timeline-dot {
+  right: -12px;
+}
+
+.timeline-item.right .timeline-dot {
+  left: -8px;
+  border-color: var(--secondary);
+  box-shadow: 0 0 10px var(--secondary);
+}
+
+/* Timeline Card */
+.timeline-card {
+  padding: 32px;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.timeline-date {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  padding: 4px 12px;
+  border-radius: var(--border-radius-full);
+  align-self: flex-start;
+}
+
+.timeline-item.right .timeline-date {
+  color: var(--secondary);
+  background: rgba(6, 182, 212, 0.08);
+  border-color: rgba(6, 182, 212, 0.2);
+}
+
+.timeline-role {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.timeline-company {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.timeline-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.timeline-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.timeline-bullets li {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  position: relative;
+  padding-left: 20px;
+}
+
+.timeline-bullets li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.timeline-item.right .timeline-bullets li::before {
+  color: var(--secondary);
+}
+
+/* Background blob */
+.accent-glow {
+  width: 450px;
+  height: 450px;
+  top: 40%;
+  right: -100px;
+  background: var(--accent);
+  opacity: 0.05;
+}
+
+/* Responsive Timeline */
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 20px;
+    transform: none;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding: 20px 20px 20px 48px;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+  }
+
+  .timeline-dot {
+    left: 12px !important;
+  }
+
+  .timeline-card {
+    padding: 24px;
+  }
+}

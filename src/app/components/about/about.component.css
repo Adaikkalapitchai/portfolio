@@ -1,0 +1,169 @@
+.about-section {
+  background: var(--bg-secondary);
+  position: relative;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section Title System (Shared standard design style) */
+.section-title-wrapper {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.section-tag {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.section-divider {
+  width: 60px;
+  height: 4px;
+  background: var(--gradient-brand);
+  border-radius: var(--border-radius-full);
+  margin: 16px auto 0;
+}
+
+/* About Grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-headline {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.about-p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.about-p strong {
+  color: var(--primary);
+}
+
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.check-icon {
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+/* Accomplishments Stats Grid */
+.about-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.metric-card {
+  padding: 32px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.metric-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2.8rem;
+  line-height: 1;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.metric-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.metric-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Background blob */
+.accent-glow {
+  width: 400px;
+  height: 400px;
+  top: 10%;
+  left: -100px;
+  background: var(--primary);
+  opacity: 0.08;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  
+  .about-info {
+    text-align: center;
+  }
+
+  .about-highlights {
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-metrics {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .metric-card {
+    padding: 24px 16px;
+  }
+}

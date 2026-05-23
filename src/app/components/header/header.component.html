@@ -1,0 +1,56 @@
+<header class="header">
+  <div class="nav-container">
+    <!-- Brand Logo -->
+    <a href="#hero" class="logo" (click)="closeMobileMenu()">
+      <span class="logo-accent">&lt;</span>
+      <span class="logo-text">Adaikkalapitchai</span>
+      <span class="logo-accent"> /&gt;</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      
+      <!-- Theme Toggle Button -->
+      <button class="theme-toggle" (click)="toggleTheme()" aria-label="Toggle Theme">
+        <span class="icon-wrapper" [class.rotated]="!isDarkTheme">
+          <svg *ngIf="isDarkTheme" class="theme-icon sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg *ngIf="!isDarkTheme" class="theme-icon moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </span>
+      </button>
+    </nav>
+
+    <!-- Mobile Header Actions -->
+    <div class="mobile-actions">
+      <!-- Mobile Theme Toggle -->
+      <button class="theme-toggle" (click)="toggleTheme()" aria-label="Toggle Theme">
+        <span class="icon-wrapper" [class.rotated]="!isDarkTheme">
+          <svg *ngIf="isDarkTheme" class="theme-icon sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg *ngIf="!isDarkTheme" class="theme-icon moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </span>
+      </button>
+
+      <!-- Hamburger Menu Toggle Button -->
+      <button class="hamburger-btn" [class.open]="isMobileMenuOpen" (click)="toggleMobileMenu()" aria-label="Toggle Mobile Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Overlay Navigation Menu -->
+  <div class="mobile-menu-overlay" [class.active]="isMobileMenuOpen" (click)="closeMobileMenu()">
+    <nav class="mobile-nav-content" (click)="$event.stopPropagation()">
+      <a href="#about" class="mobile-nav-link" (click)="closeMobileMenu()">About</a>
+      <a href="#skills" class="mobile-nav-link" (click)="closeMobileMenu()">Skills</a>
+      <a href="#experience" class="mobile-nav-link" (click)="closeMobileMenu()">Experience</a>
+      <a href="#projects" class="mobile-nav-link" (click)="closeMobileMenu()">Projects</a>
+      <a href="#contact" class="mobile-nav-link" (click)="closeMobileMenu()">Contact</a>
+    </nav>
+  </div>
+</header>
