@@ -12,47 +12,49 @@
 .contact-grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
-  gap: 60px;
+  gap: 64px;
   align-items: flex-start;
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 22px;
 }
 
 .contact-headline {
-  font-size: 1.6rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.35;
+  letter-spacing: -0.02em;
 }
 
 .contact-desc {
-  font-size: 1.05rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.7;
   color: var(--text-secondary);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 /* Contact Info Cards */
 .contact-cards {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
 .contact-card {
-  padding: 20px 24px;
+  padding: 18px 22px;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
 }
 
 .card-icon {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: var(--border-radius-sm);
   display: flex;
   align-items: center;
@@ -62,38 +64,39 @@
 }
 
 .card-icon.red {
-  background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
-  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+  background: linear-gradient(135deg, #f87171 0%, #dc2626 100%);
+  box-shadow: 0 4px 10px rgba(220, 38, 38, 0.2);
 }
 
 .card-icon.purple {
-  background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
-  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.2);
+  background: linear-gradient(135deg, #34d399 0%, #059669 100%);
+  box-shadow: 0 4px 10px rgba(5, 150, 105, 0.2);
 }
 
 .card-icon.cyan {
-  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
-  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.2);
+  background: linear-gradient(135deg, #60a5fa 0%, #2563eb 100%);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
 }
 
 .card-content {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
 }
 
 .card-label {
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
   color: var(--text-muted);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
 }
 
 .card-link {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.05rem;
+  font-weight: 600;
+  font-size: 0.98rem;
   color: var(--text-primary);
   transition: color var(--transition-fast);
 }
@@ -104,7 +107,7 @@
 
 /* Contact Form Card */
 .contact-form-card {
-  padding: 40px;
+  padding: 36px;
   position: relative;
   overflow: hidden;
 }
@@ -112,20 +115,21 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 22px;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 7px;
 }
 
 .form-label {
   font-family: var(--font-display);
-  font-size: 0.9rem;
+  font-size: 0.87rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--text-secondary);
+  letter-spacing: 0.01em;
 }
 
 .form-input {
@@ -133,26 +137,26 @@
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border-color);
   color: var(--text-primary);
-  padding: 14px 18px;
-  font-size: 0.95rem;
+  padding: 12px 16px;
+  font-size: 0.92rem;
   border-radius: var(--border-radius-sm);
   outline: none;
-  transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal), background var(--transition-normal);
 }
 
 body.light-theme .form-input {
-  background: rgba(15, 23, 42, 0.02);
+  background: rgba(17, 24, 39, 0.03);
 }
 
 .form-input::placeholder {
   color: var(--text-muted);
-  opacity: 0.6;
+  opacity: 0.55;
 }
 
 .form-input:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
-  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.12);
+  background: rgba(16, 185, 129, 0.02);
 }
 
 body.light-theme .form-input:focus {
@@ -164,7 +168,7 @@ body.light-theme .form-input:focus {
 }
 
 .form-input.error:focus {
-  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
 }
 
 .text-area {
@@ -173,9 +177,11 @@ body.light-theme .form-input:focus {
 }
 
 .error-msg {
-  font-size: 0.8rem;
-  color: #ef4444;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #f87171;
   font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 .submit-btn {
@@ -183,58 +189,178 @@ body.light-theme .form-input:focus {
   width: auto;
 }
 
-/* Success Overlay State */
-.success-overlay {
+/* ── 🎆 Fireworks Overlay ── */
+.fireworks-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   z-index: 100;
-  background: var(--bg-card);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
-  animation: pulse-glow 3s infinite ease-in-out;
+  background: rgba(4, 6, 10, 0.92);
+  animation: fw-fade-in 0.3s ease-out;
 }
 
-.success-content {
-  text-align: center;
+@keyframes fw-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Full-size canvas behind everything */
+.fireworks-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* ── Floating Emoji Crackers ── */
+.emoji-burst {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.emoji {
+  position: absolute;
+  font-size: 1.6rem;
+  animation: emoji-fly 2.5s ease-out forwards;
+  opacity: 0;
+}
+
+.e1 { top: 50%; left: 50%; animation-delay: 0.0s; --ex: -130px; --ey: -110px; }
+.e2 { top: 50%; left: 50%; animation-delay: 0.2s; --ex:  120px; --ey: -130px; }
+.e3 { top: 50%; left: 50%; animation-delay: 0.4s; --ex: -100px; --ey:  100px; }
+.e4 { top: 50%; left: 50%; animation-delay: 0.1s; --ex:  140px; --ey:   80px; }
+.e5 { top: 50%; left: 50%; animation-delay: 0.5s; --ex:    0px; --ey: -150px; }
+.e6 { top: 50%; left: 50%; animation-delay: 0.3s; --ex: -160px; --ey:   20px; }
+.e7 { top: 50%; left: 50%; animation-delay: 0.6s; --ex:  160px; --ey:  -20px; }
+.e8 { top: 50%; left: 50%; animation-delay: 0.7s; --ex:   60px; --ey:  130px; }
+
+@keyframes emoji-fly {
+  0%   { opacity: 0; transform: translate(0, 0) scale(0.3) rotate(0deg); }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { opacity: 0; transform: translate(var(--ex), var(--ey)) scale(1.4) rotate(360deg); }
+}
+
+/* ── Success Card (floats above canvas) ── */
+.fireworks-card {
+  position: relative;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
-  max-width: 320px;
-  animation: float 5s infinite ease-in-out;
+  gap: 12px;
+  padding: 36px 32px 24px;
+  background: rgba(10, 15, 20, 0.75);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: var(--border-radius-md);
+  max-width: 300px;
+  text-align: center;
+  animation: card-bounce-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s both;
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 0 0 1px rgba(16, 185, 129, 0.15),
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(16, 185, 129, 0.15);
 }
 
+@keyframes card-bounce-in {
+  from { opacity: 0; transform: translateY(30px) scale(0.85); }
+  to   { opacity: 1; transform: translateY(0)    scale(1);    }
+}
+
+/* ── Sparkle ring behind icon ── */
+.sparkle-ring {
+  position: absolute;
+  top: 28px;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 2px solid rgba(16, 185, 129, 0.4);
+  animation: ring-pulse 1.5s ease-in-out infinite;
+}
+
+.sparkle-ring-inner {
+  position: absolute;
+  inset: 8px;
+  border-radius: 50%;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  animation: ring-pulse 1.5s ease-in-out 0.4s infinite;
+}
+
+@keyframes ring-pulse {
+  0%   { transform: scale(1);    opacity: 0.8; }
+  50%  { transform: scale(1.15); opacity: 0.3; }
+  100% { transform: scale(1);    opacity: 0.8; }
+}
+
+/* ── Checkmark icon ── */
 .success-icon-wrapper {
   width: 72px;
   height: 72px;
-  background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   border-radius: var(--border-radius-full);
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+  position: relative;
+  z-index: 1;
 }
 
-.success-title {
+.success-icon-wrapper.glow-pulse {
+  animation: icon-glow 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes icon-glow {
+  from { box-shadow: 0 0 16px rgba(16, 185, 129, 0.5); }
+  to   { box-shadow: 0 0 40px rgba(16, 185, 129, 0.9), 0 0 60px rgba(16, 185, 129, 0.4); }
+}
+
+/* ── Text — always white inside the dark overlay ── */
+.fw-title {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 800;
-  color: var(--text-primary);
+  color: #ffffff;
+  letter-spacing: -0.02em;
 }
 
-.success-text {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
+.fw-subtitle {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+  margin: 0;
 }
+
+/* ── Auto-close progress bar ── */
+.progress-bar-track {
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--border-radius-full);
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--gradient-brand);
+  border-radius: var(--border-radius-full);
+  width: 100%;
+  animation: drain 5.8s linear forwards;
+}
+
+@keyframes drain {
+  from { width: 100%; }
+  to   { width: 0%; }
+}
+
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
@@ -250,7 +376,7 @@ body.light-theme .form-input:focus {
 
   .contact-cards {
     width: 100%;
-    max-width: 480px;
+    max-width: 460px;
   }
 
   .contact-card {
@@ -259,18 +385,57 @@ body.light-theme .form-input:focus {
 
   .contact-form-card {
     width: 100%;
-    max-width: 600px;
+    max-width: 580px;
     margin: 0 auto;
   }
 }
 
 @media (max-width: 480px) {
   .contact-form-card {
-    padding: 24px;
+    padding: 22px;
   }
-  
+
   .submit-btn {
     width: 100%;
     justify-content: center;
   }
+}
+
+/* ── Sending Spinner ── */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.spin-icon {
+  animation: spin 0.8s linear infinite;
+}
+
+/* Disabled state while sending */
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Error message below button */
+.send-error-msg {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: #f87171;
+  line-height: 1.5;
+  padding: 10px 14px;
+  background: rgba(239, 68, 68, 0.06);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: var(--border-radius-sm);
+  margin-top: -8px;
+}
+
+.send-error-msg svg {
+  flex-shrink: 0;
+  margin-top: 1px;
 }

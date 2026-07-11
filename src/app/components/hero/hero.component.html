@@ -13,21 +13,21 @@
 
       <!-- Main Headings -->
       <p class="hero-sub">Hi, my name is</p>
-      <h1 class="hero-title text-gradient">Adaikkalapitchai Arumugam</h1>
-      <h2 class="hero-subtitle">I build premium enterprise Front-End applications.</h2>
+      <h1 class="hero-title text-gradient">Adaikkalapitchai<br>Arumugam</h1>
+      <h2 class="hero-subtitle">I build <span class="highlight">enterprise-grade</span> Front-End applications.</h2>
 
       <!-- Bio Summary -->
       <p class="hero-desc">
-        I am an experienced <strong>Front-End Developer with 4+ years of experience</strong> specializing in building
-        high-performance, responsive web applications. Expert in TypeScript, RxJS reactive architectures, NgRx state
-        management, and crafting premium, modern user experiences.
+        An experienced <strong>Front-End Developer with 4+ years of expertise</strong> crafting
+        high-performance, responsive web applications. Specialized in TypeScript, RxJS reactive
+        architectures, NgRx state management, and building premium user experiences at scale.
       </p>
 
       <!-- Action Buttons -->
       <div class="hero-actions">
         <a href="#projects" class="btn-glass">
           <span>Explore My Work</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <line x1="5" y1="12" x2="19" y2="12" />
             <polyline points="12 5 19 12 12 19" />
@@ -37,9 +37,22 @@
           <span>Get in Touch</span>
         </a>
       </div>
+
+      <!-- Tech Stack Pills -->
+      <div class="hero-stack">
+        <span class="stack-label">stack:</span>
+        <span class="stack-pill">Angular</span>
+        <span class="stack-pill">JavaScript</span>
+        <span class="stack-pill">TypeScript</span>
+        <span class="stack-pill">RxJS</span>
+        <span class="stack-pill">Node.js</span>
+        <span class="stack-pill">Express</span>
+        <span class="stack-pill">MongoDB</span>
+        <span class="stack-pill">MySQL</span>
+      </div>
     </div>
 
-    <!-- Right Side Hero Illustration (Pure CSS Glassmorphic Dashboard mockup) -->
+    <!-- Right Side — Code Editor Mockup -->
     <div class="hero-visual">
       <div class="glass-card visual-mockup animate-float">
         <div class="mockup-header">
@@ -48,28 +61,44 @@
           <span class="dot green"></span>
           <span class="mockup-title">portfolio.component.ts</span>
         </div>
-        <div class="mockup-code">
-          <span class="code-line"><span class="token keyword">import</span> &#123; Component &#125; <span
-              class="token keyword">from</span> <span class="token string">'@angular/core'</span>;</span>
-          <span class="code-line"><span class="code-indent-1"></span></span>
-          <span class="code-line"><span class="token decorator">&#64;Component</span>(&#123;</span>
-          <span class="code-line"><span class="code-indent-1"></span>selector: <span
-              class="token string">'app-angular-dev'</span>,</span>
-          <span class="code-line"><span class="code-indent-1"></span>template: <span
-              class="token string">'&lt;awesome-portfolio /&gt;'</span>,</span>
-          <span class="code-line"><span class="code-indent-1"></span>styles: [<span class="token string">':host &#123;
-              display: flex; &#125;'</span>]</span>
-          <span class="code-line">&#125;)</span>
-          <span class="code-line"><span class="token keyword">export class</span> <span
-              class="token class-name">DeveloperComponent</span> &#123;</span>
-          <span class="code-line"><span class="code-indent-1"></span>name = <span class="token string">'Adaikkalapitchai
-              Arumugam'</span>;</span>
-          <span class="code-line"><span class="code-indent-1"></span>experience = <span class="token number">4</span>;
-            <span class="token comment">// Years</span></span>
-          <span class="code-line"><span class="code-indent-1"></span>skills = [<span
-              class="token string">'Angular'</span>, <span class="token string">'RxJS'</span>, <span
-              class="token string">'TypeScript'</span>];</span>
-          <span class="code-line">&#125;</span>
+        <div class="mockup-body">
+          <!-- Line Numbers Gutter -->
+          <div class="line-numbers">
+            <span class="line-num">1</span>
+            <span class="line-num">2</span>
+            <span class="line-num">3</span>
+            <span class="line-num">4</span>
+            <span class="line-num">5</span>
+            <span class="line-num">6</span>
+            <span class="line-num">7</span>
+            <span class="line-num">8</span>
+            <span class="line-num">9</span>
+            <span class="line-num">10</span>
+            <span class="line-num">11</span>
+            <span class="line-num">12</span>
+          </div>
+          <div class="mockup-code">
+            <span class="code-line"><span class="token keyword">import</span> &#123; Component &#125; <span
+                class="token keyword">from</span> <span class="token string">'@angular/core'</span>;</span>
+            <span class="code-line"></span>
+            <span class="code-line"><span class="token decorator">&#64;Component</span>(&#123;</span>
+            <span class="code-line"><span class="code-indent-1"></span>selector: <span
+                class="token string">'app-portfolio'</span>,</span>
+            <span class="code-line"><span class="code-indent-1"></span>standalone: <span
+                class="token number">true</span>,</span>
+            <span class="code-line">&#125;)</span>
+            <span class="code-line"><span class="token keyword">export class</span> <span
+                class="token class-name">PortfolioComponent</span> &#123;</span>
+            <span class="code-line"><span class="code-indent-1"></span>name = <span
+                class="token string">'Adaikkalapitchai'</span>;</span>
+            <span class="code-line"><span class="code-indent-1"></span>yoe = <span class="token number">4</span>; <span
+                class="token comment">// years of experience</span></span>
+            <span class="code-line"><span class="code-indent-1"></span>stack = [<span
+                class="token string">'Angular'</span>, <span class="token string">'RxJS'</span>,</span>
+            <span class="code-line"><span class="code-indent-1"></span><span class="code-indent-1"></span><span
+                class="token string">'TypeScript'</span>, <span class="token string">'NgRx'</span>];</span>
+            <span class="code-line">&#125;<span class="cursor"></span></span>
+          </div>
         </div>
       </div>
     </div>

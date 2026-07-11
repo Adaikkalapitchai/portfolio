@@ -1,0 +1,80 @@
+<div class="gate-overlay" [class.unlocking]="state === 'unlocking'">
+
+  <!-- Animated grid background -->
+  <div class="gate-grid"></div>
+
+  <!-- Floating radial glows -->
+  <div class="glow g1"></div>
+  <div class="glow g2"></div>
+  <div class="glow g3"></div>
+
+  <!-- Particle burst on unlock -->
+  <div class="particle-field">
+    <div *ngFor="let p of particles" class="gate-particle" [style.left.%]="p.x" [style.top.%]="p.y"
+      [style.width.px]="p.size" [style.height.px]="p.size" [style.background]="p.color"
+      [style.box-shadow]="'0 0 ' + p.size * 2 + 'px ' + p.color">
+    </div>
+  </div>
+
+  <!-- Main Gate Card -->
+  <div class="gate-card" [class.shake]="state === 'wrong'" [class.zoom-out]="state === 'unlocking'">
+
+    <!-- Top Badge -->
+    <div class="gate-badge">
+      <span class="badge-dot"></span>
+      <span>RESTRICTED ACCESS</span>
+    </div>
+
+    <!-- Lock Icon -->
+    <div class="lock-icon" [class.unlocked-icon]="state === 'unlocking'">
+      <svg *ngIf="state !== 'unlocking'" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+      </svg>
+      <svg *ngIf="state === 'unlocking'" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+        <path d="M7 11V7a5 5 0 0 1 9.9-1" />
+      </svg>
+    </div>
+
+    <!-- Typing animated heading -->
+    <h1 class="gate-title">
+      {{ promptText }}<span class="blink-cursor">|</span>
+    </h1>
+    <p class="gate-sub">Enter the secret name (Alan) to access this portfolio.</p>
+
+    <!-- Input Area -->
+    <div class="input-wrapper" [class.input-wrong]="state === 'wrong'" [class.input-success]="state === 'unlocking'">
+      <span class="prompt-symbol">&gt;_</span>
+      <input #nameInput type="text" class="gate-input" [value]="typedValue" (input)="onInput($event)"
+        (keydown.enter)="onEnter()" placeholder="type the name..." autocomplete="off" spellcheck="false"
+        maxlength="10" />
+    </div>
+
+    <!-- Progress bar — grows as correct letters typed -->
+    <div class="progress-track">
+      <div class="progress-fill" [style.width]="progressWidth"></div>
+    </div>
+
+    <!-- Hint (shows after 2 wrong attempts) -->
+    <p class="gate-hint" [class.hint-visible]="showHint">
+      💡 Hint: It's a short name starting with <strong>A</strong>...
+    </p>
+
+    <!-- Wrong answer message -->
+    <p class="gate-error" [class.error-visible]="state === 'wrong'">
+      ✗ &nbsp;ACCESS DENIED — try again
+    </p>
+
+    <!-- Unlock success message -->
+    <p class="gate-success" [class.success-visible]="state === 'unlocking'">
+      ✓ &nbsp;IDENTITY CONFIRMED — welcome!
+    </p>
+
+  </div>
+
+  <!-- Bottom watermark -->
+  <p class="gate-watermark">adaikkalapitchai.dev</p>
+</div>
