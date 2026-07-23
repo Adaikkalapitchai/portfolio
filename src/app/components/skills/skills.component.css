@@ -11,12 +11,18 @@
 /* Skills Grid */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 28px;
 }
 
+@media (min-width: 1200px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .skill-category-card {
-  padding: 36px 30px;
+  padding: 32px 26px;
   height: 100%;
 }
 
@@ -54,15 +60,14 @@
   box-shadow: 0 4px 14px rgba(37, 99, 235, 0.22);
 }
 
-/* keep legacy colour names as aliases */
 .category-icon-wrapper.purple {
-  background: linear-gradient(135deg, #34d399 0%, #059669 100%);
-  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.25);
+  background: linear-gradient(135deg, #a78bfa 0%, #7c3aed 100%);
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.25);
 }
 
 .category-icon-wrapper.cyan {
-  background: linear-gradient(135deg, #60a5fa 0%, #2563eb 100%);
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.22);
+  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.22);
 }
 
 .category-title {

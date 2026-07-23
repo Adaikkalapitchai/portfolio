@@ -11,9 +11,6 @@ import {
 export class AppComponent implements OnInit, OnDestroy {
   title = 'portfolio';
 
-  // Gate lock state — portfolio hidden until correct name entered
-  isLocked = true;
-
   // Cursor positions
   private mouseX = -100;
   private mouseY = -100;
@@ -50,13 +47,6 @@ export class AppComponent implements OnInit, OnDestroy {
     this.dot?.remove();
     this.ring?.remove();
     this.container?.remove();
-  }
-
-  /** Called by gate component when the correct name is entered */
-  onUnlocked(): void {
-    this.ngZone.run(() => {
-      this.isLocked = false;
-    });
   }
 
   @HostListener('document:mousemove', ['$event'])
